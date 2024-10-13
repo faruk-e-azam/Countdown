@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Launch countdown timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Poppins;
+      }
+
+      .main--container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        position: relative;
+        background: linear-gradient(
+          180deg,
+          rgba(31, 31, 31, 1) 0%,
+          rgba(55, 19, 19, 1) 100%
+        );
+      }
+      .hill--background {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+      }
+      .hill--background img {
+        width: 100%;
+      }
+      .star {
+        position: absolute;
+        opacity: 50%;
+      }
+      .time--main {
+        display: flex;
+        align-items: center;
+        margin-top: 70px;
+        gap: 30px;
+      }
+      .time--main h1 {
+        width: 100px;
+        height: 80px;
+        background-color: #34364f;
+        color: #f75f87;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+      }
+      .time--main p {
+        margin-top: 30px;
+        color: #a0a0a0;
+        font-size: 12px;
+        letter-spacing: 5px;
+      }
+      .time--main div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .page--width {
+        z-index: 2;
+      }
+      .title {
+        color: #fff;
+        letter-spacing: 5px;
+        font-size: 24px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main--container">
+      <div class="hill--background">
+        <img src="./images/pattern-hills.svg" alt="" />
+      </div>
+      <div class="star">
+        <img src="./images/bg-stars.svg" alt="" />
+      </div>
+      <div class="page--width">
+        <h1 class="title">We're launching soon</h1>
+        <div class="time--main">
+          <div class="days">
+            <h1 class="day">00</h1>
+            <p>DAYS</p>
+          </div>
+          <div class="hours">
+            <h1 class="hour">00</h1>
+            <p>HOURS</p>
+          </div>
+          <div class="minutes">
+            <h1 class="minute">00</h1>
+            <p>MINUTES</p>
+          </div>
+          <div class="seconds">
+            <h1 class="second">00</h1>
+            <p>SECONDS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 
+  We're launching soon
+
+  Days
+  Hours
+  Minutes
+  Seconds -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
