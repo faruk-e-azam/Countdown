@@ -22,6 +22,9 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      body {
+        width: 100%;
+      }
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -40,13 +43,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        height: calc(100vh - 17px);
         position: relative;
         background: linear-gradient(
           180deg,
           rgba(31, 31, 31, 1) 0%,
           rgba(55, 19, 19, 1) 100%
         );
+        max-height: 100vh;
+        overflow: hidden;
       }
       .hill--background {
         width: 100%;
@@ -62,13 +67,16 @@
         opacity: 50%;
       }
       .time--main {
-        display: flex;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         margin-top: 70px;
-        gap: 30px;
+        gap: 20px;
+      }
+      .time--main div {
+        width: 100%;
       }
       .time--main h1 {
-        width: 100px;
+        width: 100%;
         height: 80px;
         background-color: #34364f;
         color: #f75f87;
@@ -91,12 +99,27 @@
       }
       .page--width {
         z-index: 2;
+        padding: 20px;
       }
       .title {
         color: #fff;
         letter-spacing: 5px;
         font-size: 24px;
         text-align: center;
+      }
+      @media (max-width: 540px) {
+        .time--main p {
+          margin-top: 10px;
+          font-size: 8px;
+          letter-spacing: 2px;
+        }
+        .title {
+          letter-spacing: 2px;
+          font-size: 18px;
+        }
+        .page--width {
+          width: 100%;
+        }
       }
     </style>
   </head>
@@ -137,13 +160,13 @@
   Hours
   Minutes
   Seconds -->
-
+    <!-- 
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </div> -->
     <script src="./script.js"></script>
   </body>
 </html>
